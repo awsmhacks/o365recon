@@ -1,17 +1,33 @@
+# Generate Some Email addresses
 
+wget https://raw.githubusercontent.com/insidetrust/statistically-likely-usernames/master/top-formats.txt  
+  
+awk '{print $1"@domain.com"}' top-formats.txt > top-formats.domain.txt  
+  
+  
 
 # office365userenum.py
 From: https://bitbucket.org/grimhacker/office365userenum/src/master/  
 
-Enumerate valid usernames from Office 365 using ActiveSync
+Enumerate valid usernames from Office 365 using ActiveSync  
+
+Change the password it attemts in the python file itself
   
-Requires Python2.7.
   
 Example usage:
   
 python2.7 office365userenum.py -u user_list -o output.txt
 
+### Results of enum  
+
+| Response Code | Description                                 |
+|---------------|---------------------------------------------|
+| 200           | Successful login (good user/password)       |
+| 401           | Valid Username, bad password                |
+| 403           | Valid Username, good password, 2FA required |
+| 404           | Invalid Username                            |
   
+
 
 # o365recon
 script to retrieve information via O365 with a valid cred
