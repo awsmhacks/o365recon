@@ -1,3 +1,18 @@
+
+
+# office365userenum.py
+From: https://bitbucket.org/grimhacker/office365userenum/src/master/  
+
+Enumerate valid usernames from Office 365 using ActiveSync
+  
+Requires Python2.7.
+  
+Example usage:
+  
+python2.7 office365userenum.py -u user_list -o output.txt
+
+  
+
 # o365recon
 script to retrieve information via O365 with a valid cred
 
